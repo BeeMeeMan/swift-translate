@@ -31,12 +31,11 @@ public struct Language: Codable, Equatable, Hashable, RawRepresentable {
 // MARK: - Common Languages
 
 public extension Language {
-
     static var allCommon: [Language] {
         return [
-            .arabic,
             .catalan,
-            .chineseHongKong,
+            .chineseSimplified,
+            .chineseTraditional,
             .croatian,
             .czech,
             .danish,
@@ -46,7 +45,6 @@ public extension Language {
             .french,
             .german,
             .greek,
-            .hebrew,
             .hindi,
             .hungarian,
             .indonesian,
@@ -64,13 +62,17 @@ public extension Language {
             .spanish,
             .swedish,
             .thai,
-            .turkish
+            .turkish,
+            .ukrainian,
+            .vietnamese
         ]
     }
     
-    static let arabic = Self("ar")
     static let catalan = Self("ca")
-    static let chineseHongKong = Self("zh-HK")
+    static let chineseSimplified = Self("zh-Hans")
+    static let chineseTraditional = Self("zh-Hant")
+   
+    
     static let croatian = Self("hr")
     static let czech = Self("cs")
     static let danish = Self("da")
